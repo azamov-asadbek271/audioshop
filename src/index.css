@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* manrope-regular - latin */
+
+@layer components {
+  .con-align {
+    @apply max-w-[1210px] w-full px-[50px] mx-auto py-[30px]
+  }
+
+  .black-border {
+    @apply border-solid border-2 border-black
+  }
+  .h1-sty {
+    @apply font-bold text-[56px] leading-[58px] tracking-[2px]
+  }
+   .h2-sty {
+     @apply font-bold text-[40px] leading-[44px] tracking-[1.5px]
+   }
+     .h3-sty {
+       @apply font-bold text-[32px] leading-[36px] tracking-[1.15px]
+     }
+         .h4-sty {
+           @apply font-bold text-[28px] leading-[38px] tracking-[2px]
+         }
+         .h5-sty {
+         @apply font-bold text-[24px] leading-[33px] tracking-[1.7px]
+         }
+       .h6-sty {
+         @apply font-bold text-[18px] leading-[24px] 
+         tracking-[1.3px]
+                    }
+
+        .overline-sty {
+          @apply font-normal text-[14px] leading-[19px] tracking-[10px]
+        }
+             .sub-title-sty {
+               @apply font-bold text-[13px] leading-[25px] tracking-[1px]
+             }
+     .para-sty {
+       @apply font-medium text-[15px] leading-[25px]
+     }
+}

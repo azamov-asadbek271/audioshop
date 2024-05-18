@@ -1,10 +1,29 @@
-import { Link } from 'react-router-dom'
+import { Link, useActionData } from 'react-router-dom'
 import { Form } from 'react-router-dom';
 import FormInput from '../components/FormInput';
 import { ImGoogle } from "react-icons/im";
+import { UseRegister } from '../hook/UseRegister';
+import { useEffect } from 'react';
+
+export const action = async ({ request }) => {
+  let formData = await request.formData();
+  let Name = formData.get("Name");
+  let Email = formData.get("Email");
+  let Password = formData.get("Password");
+  return { Name, Email, Password };
+};
 
 
 function Register() {
+const { googleWithProvider,register } = UseRegister();
+    const data = useActionData()
+      useEffect(() => {
+        if (data) {
+          register(data);
+        }
+      }, [data]);
+
+
   return (
     <div>
       <div className="h-screen grid place-items-center bg-base-300">
@@ -17,9 +36,9 @@ function Register() {
             <FormInput type="password" label=" Password:" name="Password" />
             {/* button */}
             <div className="mt-6">
-              <button type='button' className="btn btn-primary w-full">Register</button>
+              <button  className="btn btn-primary w-full">Register</button>
             </div>
-            <button type='button' className="btn btn-secondary mt-4 ">
+            <button onClick={googleWithProvider} type='button' className="btn btn-secondary mt-4 ">
               <ImGoogle className="text-2xl" />
               <span className="text-xl">Google</span>
             </button>
