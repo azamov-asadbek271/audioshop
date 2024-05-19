@@ -14,9 +14,10 @@ import { EarPhones, HeadPhones, HomeLayout, Landing, Register,
 // action
 import { action as RegisteAction } from "./pages/Register";
 import "./App.css"
+import SinglePRoducts from "./pages/SinglePRoducts";
 
 // loader
-// import { loader as LandingLoader } from "./pages/Landing";
+import { loader as LandingLoader } from "./pages/Landing";
 
 function App() {
   const { user, authReadyState } = useSelector((state) => state.cartUser);
@@ -33,7 +34,7 @@ function App() {
         {
           index: true,
           element: <Landing />,
-          
+          loader:LandingLoader,
         },
         {
           path: "/headphones",
@@ -46,6 +47,10 @@ function App() {
         {
           path: "/earphones",
           element: <EarPhones />,
+        },
+        {
+          path: "/singleproduct/:id",
+          element: <SinglePRoducts />,
         },
       ],
     },

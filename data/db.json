@@ -198,7 +198,7 @@
 },
 "category": "headphones",
 "categoryImage": {
-"mobile": "./assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg",
+"mobile": "../assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg",
 "tablet": "./assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg",
 "desktop": "./assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg"
 },

@@ -38,6 +38,6 @@
                @apply font-bold text-[13px] leading-[25px] tracking-[1px]
              }
      .para-sty {
-       @apply font-medium text-[15px] leading-[25px]
+       @apply font-normal text-[15px] leading-[25px]
      }
 }
