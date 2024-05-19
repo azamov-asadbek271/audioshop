@@ -10,7 +10,6 @@ export const loader = async () => {
 };
 function Speakers() {
     const {req} = useLoaderData()
-    console.log(req);
   return (
     <>
       {req && (
