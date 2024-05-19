@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import { Link, useLoaderData } from "react-router-dom";
 import imgHero from "../assets/home/desktop/image-hero.jpg"
 function FeaturedProducts() {

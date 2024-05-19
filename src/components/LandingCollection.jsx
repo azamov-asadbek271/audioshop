@@ -1,7 +1,7 @@
 import {  useLoaderData } from "react-router-dom";
 import img9 from "../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg"
 import img7 from "../assets/product-zx7-speaker/desktop/image-gallery-3.jpg"
-
+import img1 from "../assets/product-yx1-earphones/desktop/image-gallery-2.jpg";
 import { Link } from "react-router-dom";
 
 
@@ -54,12 +54,31 @@ function LandingCollection() {
                 );
               }
             })}
-            {/* <div>
-              <h4 className="h4-sty"></h4>
-            </div> */}
           </div>
           {/* footer */}
-          <div></div>
+          <div>{req.map((item) => {
+            if(item.id == 1 ) {
+               const { id, name } = item;
+              return (
+                <div key={id} className="flex justify-between">
+                  <img
+                    src={img1}
+                    alt=""
+                    className="rounded-xl w-[550px] "
+                  />
+                  <div className="p-20 bg-[#F1F1F1] rounded-xl">
+                    <h4 className="h4-sty mb-10">{name}</h4>
+                    <Link
+                      to={`/singleproduct/${id}`}
+                      className="btn rounded-none btn-outline hover:text-white  w-[160px] bg-none text-black transition duration-500 sub-title-sty "
+                    >
+                      See Product
+                    </Link>
+                  </div>
+                </div>
+              );
+            }
+          })}</div>
         </div>
       )}
     </>

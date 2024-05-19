@@ -1,7 +1,7 @@
 import React from 'react'
 import { signOut } from 'firebase/auth'
 import { auth } from '../fairbase/FairbaseConfig'
-import { FeaturedProducts, LandingCollection, ProductsReplay } from '../components';
+import { FeaturedProducts, LandingCollection, PeopleCard, ProductsReplay } from '../components';
 
 // import useFetch from '../hook/useFetch'
 import { customFetch } from '../uitls';
@@ -23,6 +23,7 @@ function Landing() {
           <FeaturedProducts />
           <ProductsReplay />
           <LandingCollection/>
+          <PeopleCard/>
         </div>
       )}
     </>

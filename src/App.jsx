@@ -18,6 +18,9 @@ import SinglePRoducts from "./pages/SinglePRoducts";
 
 // loader
 import { loader as LandingLoader } from "./pages/Landing";
+import { loader as HeadLoader } from "./pages/HeadPhones";
+import { loader as SpeakersLoader} from "./pages/Speakers";
+
 
 function App() {
   const { user, authReadyState } = useSelector((state) => state.cartUser);
@@ -39,10 +42,12 @@ function App() {
         {
           path: "/headphones",
           element: <HeadPhones />,
+          loader:HeadLoader
         },
         {
           path: "/speakers",
           element: <Speakers />,
+          loader: SpeakersLoader,
         },
         {
           path: "/earphones",
