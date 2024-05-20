@@ -52,6 +52,9 @@ export const CounterSlice = createSlice({
       CounterSlice.caseReducers.calculateTotols(state)
       toast.success("cart yangilandi")
     },
+    allReove:(state)=>{
+        
+    },
     eitItem: (state, { payload }) => {
         const { amount, cartID } = payload;
         const item = state.cartItem.find((i) => i.cartID === cartID);
