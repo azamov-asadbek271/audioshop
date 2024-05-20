@@ -48,6 +48,7 @@ export const CounterSlice = createSlice({
       const { cartID } = payload;
       const products = state.cartItem.find((i) => i.cartID === cartID);
       state.cartItem = state.cartItem.filter((i) => i.cartID !== cartID);
+       state.numItemsInCart -= products.amount;
       CounterSlice.caseReducers.calculateTotols(state)
       toast.success("cart yangilandi")
     },

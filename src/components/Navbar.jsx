@@ -4,8 +4,10 @@ import { RiMenu2Line } from "react-icons/ri";
 import NavbarList from "./NavbarList";
 import { FiShoppingCart } from "react-icons/fi";
 import Modal from "./Modal";
+import { useSelector } from "react-redux";
 
 function Navbar() {
+   const { numItemsInCart } = useSelector((state) => state.cartCounter);
   return (
     <div className="bg-black ">
       <div className="con-align flex items-center justify-between border-b border-stone-500">
@@ -40,7 +42,7 @@ function Navbar() {
             <div className="indicator">
               <FiShoppingCart className="w-6 h-6 text-white" />
               <span className="badge badge-sm indicator-item bg-white text-black">
-                0{/* {value} */}
+                {numItemsInCart}
               </span>
             </div>
           </div>

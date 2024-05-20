@@ -1,10 +1,18 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeItem } from '../feature/counter/CounterSlice';
 import CartItems from './CartItems';
 import CartTotalsPrice from './CartTotalsPrice';
 
 function Modal() {
     const { numItemsInCart } = useSelector((state) => state.cartCounter);
+    // const dispatch = useDispatch()
+    // const { cartItem } = useSelector((state) => state.cartCounter);
+    // const {cartID} = cartItem
+    // console.log(cartItem.name);
+    // const removeData =() => {
+    //     dispatch(removeItem(cartItem.id))
+    // }
     
     if (numItemsInCart === 0) {
       return (
@@ -23,7 +31,7 @@ function Modal() {
     >
       <div className="flex justify-between">
         <h4 className="font-bold mb-5">Cart</h4>
-        <h2>R</h2>
+        <button>Remove</button>
       </div>
       <hr />
       <div>
