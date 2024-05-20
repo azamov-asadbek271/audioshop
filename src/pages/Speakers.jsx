@@ -19,9 +19,10 @@ function Speakers() {
           </div>
           <div>
             {req.map((item) => {
-              const { name, id, image } = item;
-              const { desktop } = image;
+              
               if (item.id == 6) {
+                const { name, id, image } = item;
+                const { desktop } = image;
                 return (
                   <CardComponents
                     key={id}

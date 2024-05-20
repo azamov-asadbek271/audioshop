@@ -14,12 +14,14 @@ import { EarPhones, HeadPhones, HomeLayout, Landing, Register,
 // action
 import { action as RegisteAction } from "./pages/Register";
 import "./App.css"
-import SinglePRoducts from "./pages/SinglePRoducts";
+import SinglePRoducts, { loader as SingleLoader } from "./pages/SinglePRoducts";
 
 // loader
 import { loader as LandingLoader } from "./pages/Landing";
 import { loader as HeadLoader } from "./pages/HeadPhones";
 import { loader as SpeakersLoader} from "./pages/Speakers";
+import { loader as earphonesLoader } from "./pages/EarPhones";
+
 
 
 function App() {
@@ -52,10 +54,12 @@ function App() {
         {
           path: "/earphones",
           element: <EarPhones />,
+          loader: earphonesLoader,
         },
         {
           path: "/singleproduct/:id",
           element: <SinglePRoducts />,
+          loader: SingleLoader,
         },
       ],
     },

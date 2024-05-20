@@ -12,7 +12,6 @@ import { customFetch } from '../uitls';
 
 function HeadPhones() {
   const {req} = useLoaderData()
- console.log(req);
   return (
     <>
       {req && (
@@ -22,9 +21,10 @@ function HeadPhones() {
           </div>
           <div>
             {req.map((item) => {
-              const { name, id,image } = item;
-              const { desktop } = image;
+             
               if (item.id == 4) {
+                 const { name, id, image } = item;
+                 const { desktop } = image;
                 return <CardComponents key={id} name={name} id={id} 
                 image={desktop}/>;
               }
@@ -32,9 +32,10 @@ function HeadPhones() {
           </div>
           <div>
             {req.map((item) => {
-              const { name, id,image } = item;
-              const { desktop } = image;
+            
               if (item.id == 3) {
+                  const { name, id, image } = item;
+                  const { desktop } = image;
                 return <CardComponentsTwo key={id} name={name} id={id} 
                 image={desktop} />;
               }
@@ -42,10 +43,11 @@ function HeadPhones() {
           </div>
           <div>
             {req.map((item) => {
-              const { name, id,image } = item;
-              const {desktop} = image
+              
              
               if (item.id == 2) {
+                const { name, id, image } = item;
+                const { desktop } = image;
                 return <CardComponents key={id} name={name} id={id}
                  image={desktop} />;
               }

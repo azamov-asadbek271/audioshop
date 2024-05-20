@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { RiMenu2Line } from "react-icons/ri";
 import NavbarList from "./NavbarList";
 import { FiShoppingCart } from "react-icons/fi";
+import Modal from "./Modal";
 
 function Navbar() {
   return (
@@ -31,8 +32,19 @@ function Navbar() {
           <NavbarList />
         </ul>
         {/* end */}
-        <div>
+        {/* <div>
           <FiShoppingCart className="text-white text-xl" />
+        </div> */}
+        <div className="dropdown dropdown-end">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+            <div className="indicator">
+              <FiShoppingCart className="w-6 h-6 text-white" />
+              <span className="badge badge-sm indicator-item bg-white text-black">
+                0{/* {value} */}
+              </span>
+            </div>
+          </div>
+          <Modal/>
         </div>
       </div>
       ;
