@@ -1,4 +1,4 @@
-function FormInput({ name, type, label, size }) {
+function FormInput({ name, type, label,placeholder }) {
   return (
     <div className="form-control">
       <label className=" w-full">
@@ -8,8 +8,8 @@ function FormInput({ name, type, label, size }) {
         <input
           name={name}
           type={type}
-          placeholder="Type here"
-          className={`input input-bordered w-[400px] max-w-lg `}
+          placeholder={placeholder}
+          className={`input input-bordered w-[350px] max-w-lg `}
         />
       </label>
     </div>
