@@ -27,7 +27,7 @@ function Modal() {
   return (
     <div
       tabIndex={0}
-      className="menu menu-lg dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-96 "
+      className="menu menu-lg dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-96"
     >
       <div className="flex justify-between">
         <h4 className="font-bold mb-5">Cart</h4>
