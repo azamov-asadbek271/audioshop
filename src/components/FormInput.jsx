@@ -9,7 +9,7 @@ function FormInput({ name, type, label, size }) {
           name={name}
           type={type}
           placeholder="Type here"
-          className={`input input-bordered w-full max-w-xs ${size}`}
+          className={`input input-bordered w-[400px] max-w-lg `}
         />
       </label>
     </div>
