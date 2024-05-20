@@ -4,9 +4,14 @@ import { RiMenu2Line } from "react-icons/ri";
 import NavbarList from "./NavbarList";
 import { FiShoppingCart } from "react-icons/fi";
 import Modal from "./Modal";
+import { signOut } from 'firebase/auth'
 import { useSelector } from "react-redux";
+import { auth } from "../fairbase/FairbaseConfig";
 
 function Navbar() {
+  const removeLogin = () => {
+    signOut(auth)
+  }
    const { numItemsInCart } = useSelector((state) => state.cartCounter);
   return (
     <div className="bg-black ">
@@ -37,16 +42,23 @@ function Navbar() {
         {/* <div>
           <FiShoppingCart className="text-white text-xl" />
         </div> */}
-        <div className="dropdown dropdown-end">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-            <div className="indicator">
-              <FiShoppingCart className="w-6 h-6 text-white" />
-              <span className="badge badge-sm indicator-item bg-white text-black">
-                {numItemsInCart}
-              </span>
+        <div className="flex items-center gap-3">
+          <button onClick={removeLogin} className=" btn btn-sm ">Logout</button>
+          <div className="dropdown dropdown-end ">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle"
+            >
+              <div className="indicator">
+                <FiShoppingCart className="w-6 h-6 text-white" />
+                <span className="badge badge-sm indicator-item bg-white text-black">
+                  {numItemsInCart}
+                </span>
+              </div>
             </div>
+            <Modal />
           </div>
-          <Modal/>
         </div>
       </div>
       ;

@@ -12,7 +12,7 @@ function CartTotalsPrice() {
         <h2 className="capitalize para-sty">total</h2>
         <h6 className="h6-sty">{dollorPrice}</h6>
       </div>
-      <Link className="btn rounded-none bg-[#D87D4A] text-white border-none mt-5 w-full">
+      <Link to="/checkout" className="btn rounded-none bg-[#D87D4A] text-white border-none mt-5 w-full">
         Checkout
       </Link>
     </div>

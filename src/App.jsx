@@ -9,7 +9,7 @@ import {
 import { ProtectRouter } from "./components";
 import { auth } from "./fairbase/FairbaseConfig";
 import { authReady, login } from "./feature/user/UserConfig";
-import { EarPhones, HeadPhones, HomeLayout, Landing, Register,
+import { Checkout, EarPhones, HeadPhones, HomeLayout, Landing, Register,
    Speakers } from "./pages";
 // action
 import { action as RegisteAction } from "./pages/Register";
@@ -39,12 +39,12 @@ function App() {
         {
           index: true,
           element: <Landing />,
-          loader:LandingLoader,
+          loader: LandingLoader,
         },
         {
           path: "/headphones",
           element: <HeadPhones />,
-          loader:HeadLoader
+          loader: HeadLoader,
         },
         {
           path: "/speakers",
@@ -60,6 +60,10 @@ function App() {
           path: "/singleproduct/:id",
           element: <SinglePRoducts />,
           loader: SingleLoader,
+        },
+        {
+          path: "/checkout",
+          element: <Checkout />,
         },
       ],
     },
