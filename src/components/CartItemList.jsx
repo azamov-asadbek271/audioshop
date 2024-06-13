@@ -1,9 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import { formatPrice } from '../uitls';
 
 function CartItemList({item}) {
-    console.log(item);
     const {image,name,price,amount} = item
     const {desktop} = image
     const dollorPrice = formatPrice(price)

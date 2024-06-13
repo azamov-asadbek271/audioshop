@@ -7,7 +7,7 @@ function Checkout() {
     <div className="con-align ">
       <p className="para-sty mt-10 mb-10">Go Back</p>
 
-      <div className="flex flex-grow">
+      <div className="flex flex-grow gap-5">
         <Form />
         <Continyu />
       </div>
